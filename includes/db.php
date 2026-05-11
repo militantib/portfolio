@@ -1,14 +1,23 @@
 <?php
-$host = getenv('DB_HOST') ?: 'localhost';
-$dbname = getenv('DB_NAME') ?: 'portfolio_db';
-$username = getenv('DB_USER') ?: 'root';
-$password = getenv('DB_PASS') ?: 'Ib522022024';
-$port = getenv('DB_PORT') ?: '5432';
+$databaseUrl = getenv('DATABASE_URL');
 
-$dsn = "pgsql:host=$host;port=$port;dbname=$dbname;";
+if ($databaseUrl) {
+    $db = parse_url($databaseUrl);
+    $host = $db['host'] ?? 'localhost';
+    $port = $db['port'] ?? '5432';
+    $dbname = ltrim($db['path'] ?? 'portfolio_db', '/');
+    $username = $db['user'] ?? 'root';
+    $password = $db['pass'] ?? '';
+} else {
+    $host = 'localhost';
+    $port = '5432';
+    $dbname = 'portfolio_db';
+    $username = 'root';
+    $password = 'Ib522022024';
+}
 
 try {
-    $pdo = new PDO($dsn, $username, $password, [
+    $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname;", $username, $password, [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
