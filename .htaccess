@@ -1,0 +1,20 @@
+RewriteEngine On
+
+# Block access to sensitive directories
+RewriteRule ^includes/ - [F,L]
+RewriteRule ^database/ - [F,L]
+
+# Block access to .htaccess itself
+<Files ".htaccess">
+    Require all denied
+</Files>
+
+# Block access to SQL files
+<FilesMatch "\.sql$">
+    Require all denied
+</FilesMatch>
+
+# Protect files directory (allow PDF downloads only)
+<FilesMatch "\.pdf$">
+    Require all granted
+</FilesMatch>
