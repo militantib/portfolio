@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Allow contact form processor
+RewriteRule ^includes/contact_process\.php$ - [L]
+
 # Block access to sensitive directories
 RewriteRule ^includes/ - [F,L]
 RewriteRule ^database/ - [F,L]
