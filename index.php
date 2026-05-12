@@ -395,10 +395,10 @@
             <div class="resume-column reveal">
                 <h3><i class="fas fa-graduation-cap"></i> Education</h3>
                 <div class="resume-item">
-                    <div class="resume-date">2016 - 2020</div>
-                    <h4>B.Sc. Computer Science</h4>
+                    <div class="resume-date">2023 - 2027</div>
+                    <h4>BSc Honors Business and Information Technology</h4>
                     <div class="resume-institution">University of Technology</div>
-                    <p>Graduated with honors. Focused on software engineering, web technologies, and human-computer interaction.</p>
+                    <p>Focused on the intersection of business strategy and information technology, covering software development, database management, and enterprise systems.</p>
                 </div>
                 <div class="resume-item">
                     <div class="resume-date">2020 - 2021</div>
