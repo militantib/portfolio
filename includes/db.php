@@ -22,6 +22,19 @@ try {
         message TEXT NOT NULL,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )");
+
+    $pdo->exec("CREATE TABLE IF NOT EXISTS page_visits (
+        id SERIAL PRIMARY KEY,
+        ip_address VARCHAR(45) NOT NULL,
+        user_agent TEXT,
+        page_url VARCHAR(500) NOT NULL,
+        visit_date DATE DEFAULT CURRENT_DATE,
+        visit_time TIME DEFAULT CURRENT_TIME,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )");
+
+    $pdo->exec("CREATE INDEX IF NOT EXISTS idx_visits_date ON page_visits(visit_date)");
+    $pdo->exec("CREATE INDEX IF NOT EXISTS idx_visits_ip ON page_visits(ip_address)");
 } catch(PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }

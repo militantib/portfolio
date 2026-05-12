@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/db.php'; require_once __DIR__ . '/tracker.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
