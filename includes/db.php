@@ -14,7 +14,6 @@ try {
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ]);
 
-    // Auto-create messages table if it doesn't exist
     $pdo->exec("CREATE TABLE IF NOT EXISTS messages (
         id SERIAL PRIMARY KEY,
         name VARCHAR(100) NOT NULL,

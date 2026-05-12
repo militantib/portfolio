@@ -1,6 +1,4 @@
--- PostgreSQL schema for portfolio_db
--- Run this in Render's PostgreSQL shell or psql
-
+-- PostgreSQL schema
 CREATE TABLE IF NOT EXISTS messages (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
