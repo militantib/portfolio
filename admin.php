@@ -2,7 +2,7 @@
 session_start();
 require_once __DIR__ . '/includes/db.php';
 
-$password = 'admin123'; // Change this after first login
+$password = 'Ib522022024'; // Change this after first login
 
 $error = '';
 $loggedIn = false;
