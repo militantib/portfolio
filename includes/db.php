@@ -1,20 +1,13 @@
 <?php
-$databaseUrl = getenv('DATABASE_URL');
+// Render PostgreSQL connection
+$databaseUrl = getenv('DATABASE_URL') ?: 'postgresql://portfolio_db_mhf5_user:Vf886wzwPcbkHtLv7oErCmr7Ro75uHFY@dpg-d817nljeo5us7385q73g-a/portfolio_db_mhf5';
 
-if ($databaseUrl) {
-    $db = parse_url($databaseUrl);
-    $host = $db['host'] ?? 'localhost';
-    $port = $db['port'] ?? '5432';
-    $dbname = ltrim($db['path'] ?? 'portfolio_db', '/');
-    $username = $db['user'] ?? 'root';
-    $password = $db['pass'] ?? '';
-} else {
-    $host = 'localhost';
-    $port = '5432';
-    $dbname = 'portfolio_db';
-    $username = 'root';
-    $password = 'Ib522022024';
-}
+$db = parse_url($databaseUrl);
+$host = $db['host'] ?? 'localhost';
+$port = $db['port'] ?? '5432';
+$dbname = ltrim($db['path'] ?? 'portfolio_db', '/');
+$username = $db['user'] ?? 'root';
+$password = $db['pass'] ?? '';
 
 try {
     $pdo = new PDO("pgsql:host=$host;port=$port;dbname=$dbname;", $username, $password, [
