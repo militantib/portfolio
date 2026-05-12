@@ -71,15 +71,15 @@
                 </p>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <div class="number" data-count="50" data-suffix="+">0</div>
+                        <div class="number" data-count="47" data-suffix="+">0</div>
                         <div class="label">Projects Done</div>
                     </div>
                     <div class="stat-card">
-                        <div class="number" data-count="30" data-suffix="+">0</div>
-                        <div class="label">Happy Clients</div>
+                        <div class="number" data-count="28" data-suffix="+">0</div>
+                        <div class="label">Happy Customers</div>
                     </div>
                     <div class="stat-card">
-                        <div class="number" data-count="15" data-suffix="+">0</div>
+                        <div class="number" data-count="7" data-suffix="+">0</div>
                         <div class="label">Awards Won</div>
                     </div>
                 </div>
