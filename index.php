@@ -484,7 +484,7 @@
                     </div>
                 </div>
                 <div class="contact-info-item">
-                    <div class="icon"><i class="fab fa-whatsapp" style="background:#25D366;"></i></div>
+                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
                     <div>
                         <h4>WhatsApp</h4>
                         <p><a href="https://wa.me/23274280034" target="_blank">Chat on WhatsApp</a></p>
