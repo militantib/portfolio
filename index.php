@@ -410,7 +410,7 @@
             <div class="resume-column reveal reveal-delay-2">
                 <h3><i class="fas fa-briefcase"></i> Experience</h3>
                 <div class="resume-item">
-                    <div class="resume-date">2020 - Present</div>
+                    <div class="resume-date">2024 - Present</div>
                     <h4>CEO & Founder</h4>
                     <div class="resume-institution">Tech Forge, Drop Delights & Delight Designs</div>
                     <p>Leading software development, graphic design, and product strategy across three companies. Driving innovation and delivering impactful digital solutions.</p>
